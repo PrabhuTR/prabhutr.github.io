@@ -784,14 +784,15 @@
 
         .exp-description {
             color: var(--gray);
-            line-height: 1.8;
+            line-height: 1.5;
         }
 
         .exp-description li {
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             list-style: none;
             position: relative;
-            padding-left: 20px;
+            padding-left: 18px;
+            font-size: 0.92rem;
         }
 
         .exp-description li::before {
@@ -799,6 +800,7 @@
             color: var(--primary);
             position: absolute;
             left: 0;
+            font-size: 0.85rem;
         }
 
         .exp-tags {
@@ -1351,34 +1353,34 @@
                     </ul>
                 </div>
 
-                <!-- My Interests -->
+                <!-- My Interests & Hobbies -->
                 <div class="skill-category" style="padding: 35px;">
-                    <h4 style="font-size: 1.3rem; margin-bottom: 20px;">💡 My Interests</h4>
-                    <p style="color: #6B7280; line-height: 1.8; margin-bottom: 15px;">
-                        Beyond work, I'm passionate about:
-                    </p>
-                    <ul style="color: #6B7280; line-height: 2; list-style: none; padding: 0;">
-                        <li>▸ <strong>Cloud Native Technologies</strong> - Kubernetes, Docker, Service Mesh</li>
-                        <li>▸ <strong>Infrastructure as Code</strong> - Terraform, Pulumi, GitOps</li>
-                        <li>▸ <strong>Automation</strong> - Building tools that save engineering hours</li>
-                        <li>▸ <strong>Site Reliability</strong> - SLIs, SLOs, Error Budgets</li>
-                        <li>▸ <strong>Open Source</strong> - Contributing to DevOps tools</li>
-                        <li>▸ <strong>Learning</strong> - Currently exploring Platform Engineering</li>
+                    <h4 style="font-size: 1.3rem; margin-bottom: 20px;">🎯 Interests & Hobbies</h4>
+                    <ul style="color: #6B7280; line-height: 1.7; list-style: none; padding: 0; font-size: 0.95rem;">
+                        <li style="margin-bottom: 8px;">🏍️ <strong>Bike Riding</strong> - Love long rides, covered <strong>500+ km</strong> on adventures</li>
+                        <li style="margin-bottom: 8px;">✈️ <strong>Travel</strong> - Exploring new places and road trips</li>
+                        <li style="margin-bottom: 8px;">🏏 <strong>Cricket</strong> - Die-hard <strong>RCB</strong> fan & <strong>Virat Kohli</strong> supporter</li>
+                        <li style="margin-bottom: 8px;">☁️ <strong>Cloud Native</strong> - Kubernetes, Docker, Service Mesh</li>
+                        <li style="margin-bottom: 8px;">🔧 <strong>Automation</strong> - Building tools that save engineering hours</li>
+                        <li style="margin-bottom: 8px;">📚 <strong>Learning</strong> - Currently exploring Platform Engineering</li>
                     </ul>
+                    <div style="margin-top: 15px; padding: 12px 15px; background: linear-gradient(135deg, rgba(255, 0, 0, 0.1), rgba(0, 0, 0, 0.05)); border-radius: 10px; border-left: 4px solid #E53935;">
+                        <p style="color: #E53935; font-weight: 700; font-size: 1rem; margin: 0; font-style: italic;">"EE SALA CUP NAMDU" 🏆❤️</p>
+                    </div>
                 </div>
 
-                <!-- Fun Facts -->
+                <!-- Quick Facts -->
                 <div class="skill-category" style="padding: 35px;">
                     <h4 style="font-size: 1.3rem; margin-bottom: 20px;">⚡ Quick Facts</h4>
-                    <ul style="color: #6B7280; line-height: 2; list-style: none; padding: 0;">
-                        <li>▸ 🏆 AWS Certified with <strong>930/1000</strong> score</li>
-                        <li>▸ 💻 <strong>Java Full Stack Developer</strong> Certified</li>
-                        <li>▸ 📍 Based in <strong>Bengaluru, India</strong></li>
-                        <li>▸ 🎓 B.E. in Electrical & Electronics from <strong>VTU</strong></li>
-                        <li>▸ 💼 Working at <strong>Thomson Reuters</strong> since Dec 2022</li>
-                        <li>▸ 🔧 Managed <strong>500+ ServiceNow tickets</strong> with 98% SLA</li>
-                        <li>▸ 🚨 Handled <strong>100+ P1/P2 incidents</strong> in on-call</li>
-                        <li>▸ 📈 Saved <strong>40+ engineering hours/month</strong> through automation</li>
+                    <ul style="color: #6B7280; line-height: 1.7; list-style: none; padding: 0; font-size: 0.95rem;">
+                        <li style="margin-bottom: 8px;">🏆 AWS Certified - <strong>930/1000</strong> score</li>
+                        <li style="margin-bottom: 8px;">💻 <strong>Java Full Stack Developer</strong> Certified</li>
+                        <li style="margin-bottom: 8px;">📍 Based in <strong>Bengaluru, India</strong></li>
+                        <li style="margin-bottom: 8px;">🎓 B.E. in Electrical & Electronics - <strong>VTU</strong></li>
+                        <li style="margin-bottom: 8px;">💼 At <strong>Thomson Reuters</strong> since Dec 2022</li>
+                        <li style="margin-bottom: 8px;">🔧 <strong>500+ ServiceNow tickets</strong> - 98% SLA</li>
+                        <li style="margin-bottom: 8px;">🚨 <strong>100+ P1/P2 incidents</strong> handled on-call</li>
+                        <li style="margin-bottom: 8px;">📈 <strong>40+ hours/month</strong> saved via automation</li>
                     </ul>
                 </div>
             </div>
@@ -1398,19 +1400,13 @@
                     <div class="exp-content">
                         <h3>DevOps Engineer</h3>
                         <p class="exp-company">Thomson Reuters • Bengaluru</p>
-                        <ul class="exp-description">
-                            <li>Lead CI/CD pipeline development for <strong>400+ enterprise applications</strong>, achieving <strong>40% faster deployments</strong></li>
-                            <li>Architected <strong>25+ reusable composite actions</strong> and workflow templates, standardizing practices across 15+ teams</li>
-                            <li>Deployed <strong>30+ containerized microservices</strong> on Amazon EKS using Helm charts and ArgoCD with <strong>99.9% success rate</strong></li>
-                            <li>Implemented <strong>deployment strategies</strong> - Blue-Green, Rolling, Canary deployments for zero-downtime releases</li>
-                            <li>Managed <strong>application traffic</strong> using F5 BIG-IP load balancers, configured traffic routing and health checks for <strong>1M+ daily requests</strong></li>
-                            <li>Built observability platform using <strong>Datadog with 50+ custom dashboards</strong> and 200+ alerts integrated with PagerDuty</li>
-                            <li>Managed <strong>build artifact lifecycle</strong> in JFrog Artifactory - versioning, retention policies, and dependency management</li>
-                            <li>Provisioned AWS infrastructure using <strong>Terraform</strong> - 100+ EC2 instances, 50+ S3 buckets, 15+ RDS databases</li>
-                            <li><strong>24/7 On-Call Support</strong> in rotational shifts, extending shifts during critical incidents for seamless handoffs</li>
-                            <li>Participated in <strong>TRT (Technical Response Team) calls</strong> for P1/P2 incidents, coordinating with multiple teams for resolution</li>
-                            <li>Responded to <strong>100+ P1/P2 production incidents</strong>, maintaining <strong>95% SLA adherence</strong> with MTTR reduced by 40%</li>
-                            <li>Conducted <strong>50+ RCA reviews</strong> and implemented preventive measures to reduce recurring incidents</li>
+                        <ul class="exp-description" style="font-size: 0.92rem; line-height: 1.6;">
+                            <li>Lead CI/CD for <strong>400+ apps</strong> - 40% faster deployments | <strong>25+ reusable actions</strong> across 15+ teams</li>
+                            <li>Deployed <strong>30+ microservices</strong> on EKS with Helm & ArgoCD | <strong>Blue-Green, Rolling, Canary</strong> deployments</li>
+                            <li>Managed <strong>F5 BIG-IP traffic</strong> (1M+ daily requests) | <strong>Artifact management</strong> in JFrog Artifactory</li>
+                            <li>Built <strong>Datadog observability</strong> - 50+ dashboards, 200+ alerts | <strong>Terraform</strong> infra (100+ EC2, 50+ S3, 15+ RDS)</li>
+                            <li><strong>24/7 On-Call</strong> rotational shifts | <strong>TRT bridge calls</strong> for P1/P2 incidents | Extended shifts for critical issues</li>
+                            <li>Handled <strong>100+ P1/P2 incidents</strong> - 95% SLA | <strong>50+ RCAs</strong> - 40% MTTR reduction</li>
                         </ul>
                     </div>
                     <div class="exp-tags">
@@ -1429,22 +1425,13 @@
                     <div class="exp-content">
                         <h3>Associate DevOps Engineer</h3>
                         <p class="exp-company">Thomson Reuters • Bengaluru</p>
-                        <ul class="exp-description">
-                            <li>Managed <strong>Jenkins and GitHub Actions pipelines</strong> for 100+ Spring Boot applications across Dev, QA, UAT, and Production</li>
-                            <li>Configured builds using <strong>Maven, Gradle, Ant</strong> (Java) and <strong>MSBuild</strong> (.NET) following release management guidelines</li>
-                            <li>Handled <strong>two deployment types</strong>: Standalone deployments and <strong>CMDB-based deployments</strong> with configuration tracking</li>
-                            <li>Deployed WAR/JAR files to <strong>Tomcat servers</strong> and standalone apps on Linux; IIS deployments on Windows</li>
-                            <li>Maintained <strong>CMDB inventory</strong> for 400+ applications - CI relationships, server mappings, and configuration items in ServiceNow</li>
-                            <li>Managed <strong>application lifecycle</strong> from development to production - build, test, deploy, monitor, and maintain</li>
-                            <li>Developed <strong>Universal Patch Scheduler</strong> - automated patching for <strong>200+ servers</strong>, reducing time from 4 hours to 45 minutes</li>
-                            <li>Executed <strong>monthly patching & maintenance windows</strong> - OS patches, security updates, and application upgrades</li>
-                            <li>Managed <strong>build artifacts</strong> in JFrog Artifactory - versioning, cleanup policies, and dependency resolution</li>
-                            <li><strong>Config management</strong> - maintained environment-specific configs, secrets rotation, and property files across environments</li>
-                            <li>Managed 500+ ServiceNow tickets (Incidents, Changes, RITMs) with <strong>98% on-time resolution</strong> following ITIL practices</li>
-                            <li><strong>Application debugging</strong> - analyzed logs, performed thread dumps, heap analysis, and identified root causes</li>
-                            <li>Participated in <strong>TRT bridge calls</strong> during major incidents, coordinating with Dev, QA, and Infra teams</li>
-                            <li><strong>24/7 rotational on-call support</strong> - handled off-hours incidents, extended shifts during critical issues</li>
-                            <li>Wrote <strong>Python and Bash automation scripts</strong> saving <strong>40+ engineering hours per month</strong></li>
+                        <ul class="exp-description" style="font-size: 0.92rem; line-height: 1.6;">
+                            <li>Managed <strong>Jenkins & GHA pipelines</strong> for 100+ Spring Boot apps | Builds: <strong>Maven, Gradle, Ant, MSBuild</strong></li>
+                            <li><strong>Standalone & CMDB-based deployments</strong> | Tomcat/Linux & IIS/Windows | <strong>400+ apps</strong> in CMDB inventory</li>
+                            <li>Built <strong>Universal Patch Scheduler</strong> - automated <strong>200+ servers</strong> (4 hrs → 45 min) | Monthly patching windows</li>
+                            <li><strong>Artifact management</strong> in Artifactory | <strong>Config management</strong> - env configs, secrets rotation, property files</li>
+                            <li><strong>500+ ServiceNow tickets</strong> (98% SLA) | <strong>Application debugging</strong> - logs, thread dumps, heap analysis</li>
+                            <li><strong>TRT bridge calls</strong> | <strong>24/7 on-call support</strong> | <strong>Python/Bash scripts</strong> saving 40+ hrs/month</li>
                         </ul>
                     </div>
                     <div class="exp-tags">
