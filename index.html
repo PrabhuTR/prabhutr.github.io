@@ -64,6 +64,16 @@
             background: linear-gradient(180deg, #CFFAFE 0%, #A5F3FC 50%, #67E8F9 100%);
         }
 
+        body.theme-architecture {
+            background: linear-gradient(180deg, #1E293B 0%, #0F172A 50%, #020617 100%);
+        }
+
+        body.theme-architecture .section-title,
+        body.theme-architecture .section-label,
+        body.theme-architecture .section-number {
+            color: white;
+        }
+
         body.theme-certifications {
             background: linear-gradient(180deg, #FCE7F3 0%, #FBCFE8 50%, #F9A8D4 100%);
         }
@@ -372,6 +382,38 @@
             75% { transform: translateY(-40px) translateX(10px) scale(1.1); opacity: 0.7; }
         }
 
+        /* Architecture Animations */
+        @keyframes nodePulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+            50% { transform: scale(1.05); box-shadow: 0 8px 25px rgba(0,0,0,0.3); }
+        }
+
+        @keyframes podScale {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+        }
+
+        .arch-arrow {
+            color: #7C3AED;
+            font-size: 1.5rem;
+            font-weight: bold;
+            animation: arrowPulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes arrowPulse {
+            0%, 100% { opacity: 0.5; transform: translateX(0); }
+            50% { opacity: 1; transform: translateX(5px); }
+        }
+
+        .arch-node, .aws-node {
+            transition: all 0.3s ease;
+        }
+
+        .arch-node:hover, .aws-node:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
         /* Navigation */
         nav {
             position: fixed;
@@ -529,8 +571,28 @@
 
         .hero-buttons {
             display: flex;
+            flex-wrap: wrap;
             gap: 20px;
             margin-bottom: 40px;
+        }
+
+        .btn-resume {
+            background: linear-gradient(135deg, #10B981, #059669) !important;
+            color: white !important;
+            padding: 16px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(16, 185, 129, 0.3);
+        }
+
+        .btn-resume:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 30px rgba(16, 185, 129, 0.5);
         }
 
         .btn-primary {
@@ -1329,6 +1391,7 @@
         <div class="scroll-dot" data-section="experience" data-label="Experience"></div>
         <div class="scroll-dot" data-section="skills" data-label="Skills"></div>
         <div class="scroll-dot" data-section="projects" data-label="Projects"></div>
+        <div class="scroll-dot" data-section="architecture" data-label="Architecture"></div>
         <div class="scroll-dot" data-section="certifications" data-label="Certs"></div>
         <div class="scroll-dot" data-section="contact" data-label="Contact"></div>
     </div>
@@ -1344,6 +1407,7 @@
             <li><a href="#experience">Experience</a></li>
             <li><a href="#skills">Expertise</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#architecture">Architecture</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
         <a href="mailto:prabhuyadavdvg@gmail.com" class="nav-cta">Hire Me</a>
@@ -1368,6 +1432,10 @@
                             <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M13.025 1l-2.847 2.828 6.176 6.176H0v3.992h16.354l-6.176 6.176L13.025 23 24 12z"/></svg>
                         </a>
                         <a href="#experience" class="btn-secondary">See My Journey</a>
+                        <a href="Prabhu_P_DevOps_Resume.pdf" download="Prabhu P - DevOps Engineer Resume.pdf" class="btn-resume" style="background: linear-gradient(135deg, #10B981, #059669); color: white; padding: 16px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 10px; transition: all 0.3s ease; box-shadow: 0 4px 20px rgba(16, 185, 129, 0.3);">
+                            📄 Download Resume
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                        </a>
                     </div>
                 </div>
                 <div class="hero-image-container">
@@ -1988,10 +2056,215 @@
             </div>
         </section>
 
+        <!-- Architecture Section -->
+        <section class="section" id="architecture">
+            <div class="section-header" style="position: relative;">
+                <span class="section-number">04</span>
+                <p class="section-label">System Design</p>
+                <h2 class="section-title">DevOps <span class="highlight">Architecture</span></h2>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr; gap: 40px;">
+
+                <!-- CI/CD Pipeline -->
+                <div style="background: white; border-radius: 24px; padding: 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.08);">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 30px; display: flex; align-items: center; gap: 12px;">
+                        <span style="background: linear-gradient(135deg, #7C3AED, #3B82F6); padding: 12px; border-radius: 12px;">🔄</span>
+                        CI/CD Pipeline Flow
+                    </h3>
+
+                    <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 15px; padding: 20px 0;">
+                        <!-- Developer -->
+                        <div class="arch-node" style="background: linear-gradient(135deg, #3B82F6, #1D4ED8); color: white; padding: 15px 25px; border-radius: 12px; font-weight: 600; animation: nodePulse 2s ease-in-out infinite;">
+                            👨‍💻 Developer
+                        </div>
+                        <div class="arch-arrow">→</div>
+
+                        <!-- GitHub -->
+                        <div class="arch-node" style="background: #24292e; color: white; padding: 15px 25px; border-radius: 12px; font-weight: 600; animation: nodePulse 2s ease-in-out infinite 0.2s;">
+                            <svg width="20" height="20" fill="white" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 8px;"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                            GitHub
+                        </div>
+                        <div class="arch-arrow">→</div>
+
+                        <!-- GitHub Actions -->
+                        <div class="arch-node" style="background: linear-gradient(135deg, #2088FF, #79B8FF); color: white; padding: 15px 25px; border-radius: 12px; font-weight: 600; animation: nodePulse 2s ease-in-out infinite 0.4s;">
+                            ⚡ GitHub Actions
+                        </div>
+                        <div class="arch-arrow">→</div>
+
+                        <!-- Build -->
+                        <div class="arch-node" style="background: linear-gradient(135deg, #F59E0B, #D97706); color: white; padding: 15px 25px; border-radius: 12px; font-weight: 600; animation: nodePulse 2s ease-in-out infinite 0.6s;">
+                            🔨 Maven/Gradle Build
+                        </div>
+                        <div class="arch-arrow">→</div>
+
+                        <!-- Docker -->
+                        <div class="arch-node" style="background: linear-gradient(135deg, #0DB7ED, #384D54); color: white; padding: 15px 25px; border-radius: 12px; font-weight: 600; animation: nodePulse 2s ease-in-out infinite 0.8s;">
+                            🐳 Docker Build
+                        </div>
+                        <div class="arch-arrow">→</div>
+
+                        <!-- ECR -->
+                        <div class="arch-node" style="background: linear-gradient(135deg, #FF9900, #232F3E); color: white; padding: 15px 25px; border-radius: 12px; font-weight: 600; animation: nodePulse 2s ease-in-out infinite 1s;">
+                            📦 Amazon ECR
+                        </div>
+                        <div class="arch-arrow">→</div>
+
+                        <!-- EKS Deploy -->
+                        <div class="arch-node" style="background: linear-gradient(135deg, #10B981, #059669); color: white; padding: 15px 25px; border-radius: 12px; font-weight: 600; animation: nodePulse 2s ease-in-out infinite 1.2s;">
+                            🚀 Deploy to EKS
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AWS Architecture -->
+                <div style="background: linear-gradient(135deg, #232F3E, #1A242F); border-radius: 24px; padding: 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.15);">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 30px; color: white; display: flex; align-items: center; gap: 12px;">
+                        <span style="background: linear-gradient(135deg, #FF9900, #FF6600); padding: 12px; border-radius: 12px;">☁️</span>
+                        AWS Infrastructure Architecture
+                    </h3>
+
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
+
+                        <!-- Internet & DNS Layer -->
+                        <div style="display: flex; align-items: center; gap: 20px;">
+                            <div class="aws-node" style="background: linear-gradient(135deg, #4A90D9, #2E5B94); padding: 15px 30px; border-radius: 10px; color: white; font-weight: 600;">
+                                🌐 Internet
+                            </div>
+                            <span style="color: #FF9900; font-size: 1.5rem;">↓</span>
+                            <div class="aws-node" style="background: linear-gradient(135deg, #8C4FFF, #6B3FBF); padding: 15px 30px; border-radius: 10px; color: white; font-weight: 600;">
+                                🔗 Route 53
+                            </div>
+                        </div>
+
+                        <span style="color: #FF9900; font-size: 1.5rem;">↓</span>
+
+                        <!-- Load Balancer -->
+                        <div class="aws-node" style="background: linear-gradient(135deg, #8C4FFF, #6B3FBF); padding: 20px 40px; border-radius: 12px; color: white; font-weight: 600; font-size: 1.1rem; box-shadow: 0 4px 20px rgba(140, 79, 255, 0.4);">
+                            ⚖️ Application Load Balancer
+                        </div>
+
+                        <span style="color: #FF9900; font-size: 1.5rem;">↓</span>
+
+                        <!-- EKS Cluster -->
+                        <div style="background: rgba(255, 153, 0, 0.1); border: 2px solid #FF9900; border-radius: 20px; padding: 30px; width: 100%; max-width: 600px;">
+                            <div style="text-align: center; margin-bottom: 20px; color: #FF9900; font-weight: 700; font-size: 1.2rem;">
+                                ☸️ Amazon EKS Cluster
+                            </div>
+
+                            <div style="display: flex; justify-content: center; gap: 30px; margin-bottom: 20px;">
+                                <div class="aws-node" style="background: linear-gradient(135deg, #326CE5, #1E4DB7); padding: 20px 30px; border-radius: 12px; color: white; text-align: center; animation: podScale 3s ease-in-out infinite;">
+                                    <div style="font-size: 2rem;">🔷</div>
+                                    <div style="font-weight: 600;">App Pod 1</div>
+                                </div>
+                                <div class="aws-node" style="background: linear-gradient(135deg, #326CE5, #1E4DB7); padding: 20px 30px; border-radius: 12px; color: white; text-align: center; animation: podScale 3s ease-in-out infinite 0.5s;">
+                                    <div style="font-size: 2rem;">🔷</div>
+                                    <div style="font-weight: 600;">App Pod 2</div>
+                                </div>
+                            </div>
+
+                            <div style="text-align: center; color: #A0AEC0; margin-bottom: 20px;">↓ ↓</div>
+
+                            <div class="aws-node" style="background: linear-gradient(135deg, #326CE5, #1E4DB7); padding: 15px 30px; border-radius: 10px; color: white; font-weight: 600; margin: 0 auto; display: block; text-align: center; width: fit-content;">
+                                🔌 Kubernetes Service
+                            </div>
+
+                            <div style="display: flex; justify-content: center; gap: 15px; margin-top: 20px; flex-wrap: wrap;">
+                                <div style="background: rgba(255,255,255,0.1); padding: 10px 20px; border-radius: 8px; color: #A0AEC0; font-size: 0.9rem;">
+                                    📋 ConfigMap
+                                </div>
+                                <div style="background: rgba(255,255,255,0.1); padding: 10px 20px; border-radius: 8px; color: #A0AEC0; font-size: 0.9rem;">
+                                    🔐 Secrets
+                                </div>
+                                <div style="background: rgba(255,255,255,0.1); padding: 10px 20px; border-radius: 8px; color: #A0AEC0; font-size: 0.9rem;">
+                                    💾 EBS Storage
+                                </div>
+                            </div>
+                        </div>
+
+                        <span style="color: #FF9900; font-size: 1.5rem;">↓</span>
+
+                        <!-- Data Layer -->
+                        <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+                            <div class="aws-node" style="background: linear-gradient(135deg, #3B48CC, #2D3AB8); padding: 15px 25px; border-radius: 10px; color: white; font-weight: 600;">
+                                🗄️ Amazon RDS
+                            </div>
+                            <div class="aws-node" style="background: linear-gradient(135deg, #3B48CC, #2D3AB8); padding: 15px 25px; border-radius: 10px; color: white; font-weight: 600;">
+                                📊 DynamoDB
+                            </div>
+                            <div class="aws-node" style="background: linear-gradient(135deg, #FF9900, #CC7A00); padding: 15px 25px; border-radius: 10px; color: white; font-weight: 600;">
+                                ⚡ Lambda
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deployment Process -->
+                <div style="background: white; border-radius: 24px; padding: 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.08);">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 30px; display: flex; align-items: center; gap: 12px;">
+                        <span style="background: linear-gradient(135deg, #10B981, #059669); padding: 12px; border-radius: 12px;">🎯</span>
+                        Release Management Process
+                    </h3>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px;">
+                        <div style="text-align: center; padding: 20px; background: linear-gradient(135deg, #EEF2FF, #E0E7FF); border-radius: 16px;">
+                            <div style="font-size: 2.5rem; margin-bottom: 10px;">📦</div>
+                            <div style="font-weight: 600; color: #3730A3;">Artifact Ready</div>
+                            <div style="font-size: 0.85rem; color: #6366F1; margin-top: 5px;">JFrog/Nexus</div>
+                        </div>
+                        <div style="text-align: center; padding: 20px; background: linear-gradient(135deg, #FEF3C7, #FDE68A); border-radius: 16px;">
+                            <div style="font-size: 2.5rem; margin-bottom: 10px;">🔍</div>
+                            <div style="font-weight: 600; color: #92400E;">Check User</div>
+                            <div style="font-size: 0.85rem; color: #B45309; margin-top: 5px;">Authorization</div>
+                        </div>
+                        <div style="text-align: center; padding: 20px; background: linear-gradient(135deg, #DCFCE7, #BBF7D0); border-radius: 16px;">
+                            <div style="font-size: 2.5rem; margin-bottom: 10px;">⏸️</div>
+                            <div style="font-weight: 600; color: #166534;">Pause Monitors</div>
+                            <div style="font-size: 0.85rem; color: #15803D; margin-top: 5px;">Maintenance</div>
+                        </div>
+                        <div style="text-align: center; padding: 20px; background: linear-gradient(135deg, #E0E7FF, #C7D2FE); border-radius: 16px;">
+                            <div style="font-size: 2.5rem; margin-bottom: 10px;">📋</div>
+                            <div style="font-weight: 600; color: #3730A3;">CMDB Update</div>
+                            <div style="font-size: 0.85rem; color: #6366F1; margin-top: 5px;">Config Mgmt</div>
+                        </div>
+                        <div style="text-align: center; padding: 20px; background: linear-gradient(135deg, #CFFAFE, #A5F3FC); border-radius: 16px;">
+                            <div style="font-size: 2.5rem; margin-bottom: 10px;">🅰️</div>
+                            <div style="font-weight: 600; color: #0E7490;">Deploy Site A</div>
+                            <div style="font-size: 0.85rem; color: #0891B2; margin-top: 5px;">Primary</div>
+                        </div>
+                        <div style="text-align: center; padding: 20px; background: linear-gradient(135deg, #FCE7F3, #FBCFE8); border-radius: 16px;">
+                            <div style="font-size: 2.5rem; margin-bottom: 10px;">✅</div>
+                            <div style="font-weight: 600; color: #9D174D;">Validation</div>
+                            <div style="font-size: 0.85rem; color: #BE185D; margin-top: 5px;">Health Check</div>
+                        </div>
+                        <div style="text-align: center; padding: 20px; background: linear-gradient(135deg, #CFFAFE, #A5F3FC); border-radius: 16px;">
+                            <div style="font-size: 2.5rem; margin-bottom: 10px;">🅱️</div>
+                            <div style="font-weight: 600; color: #0E7490;">Deploy Site B</div>
+                            <div style="font-size: 0.85rem; color: #0891B2; margin-top: 5px;">Secondary</div>
+                        </div>
+                        <div style="text-align: center; padding: 20px; background: linear-gradient(135deg, #ECFDF5, #D1FAE5); border-radius: 16px;">
+                            <div style="font-size: 2.5rem; margin-bottom: 10px;">🎉</div>
+                            <div style="font-weight: 600; color: #065F46;">Close Change</div>
+                            <div style="font-size: 0.85rem; color: #047857; margin-top: 5px;">Complete</div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 25px; padding: 15px 20px; background: linear-gradient(135deg, #FEE2E2, #FECACA); border-radius: 12px; display: flex; align-items: center; gap: 15px;">
+                        <span style="font-size: 1.5rem;">↩️</span>
+                        <div>
+                            <div style="font-weight: 600; color: #991B1B;">Rollback Strategy</div>
+                            <div style="font-size: 0.9rem; color: #B91C1C;">Automatic rollback triggered on validation failure</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Certifications -->
         <section class="section">
             <div class="section-header" style="position: relative;">
-                <span class="section-number">04</span>
+                <span class="section-number">05</span>
                 <p class="section-label">Credentials</p>
                 <h2 class="section-title">Certifications & <span class="highlight">Education</span></h2>
             </div>
@@ -2087,6 +2360,7 @@
             'experience': 'theme-experience',
             'skills': 'theme-skills',
             'projects': 'theme-projects',
+            'architecture': 'theme-architecture',
             'certifications': 'theme-certifications',
             'contact': 'theme-contact'
         };
