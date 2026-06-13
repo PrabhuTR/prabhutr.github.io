@@ -747,12 +747,30 @@
             border-radius: 25px;
             box-shadow: 0 10px 40px rgba(124, 58, 237, 0.08);
             display: grid;
-            grid-template-columns: auto 1fr auto;
-            gap: 30px;
+            grid-template-columns: 180px 1fr;
+            grid-template-rows: auto auto;
+            gap: 20px 30px;
             align-items: start;
             transition: all 0.4s ease;
             transform-style: preserve-3d;
             cursor: pointer;
+        }
+
+        .experience-card .exp-date {
+            grid-row: 1;
+            grid-column: 1;
+        }
+
+        .experience-card .exp-content {
+            grid-row: 1 / 3;
+            grid-column: 2;
+        }
+
+        .experience-card .exp-tags {
+            grid-row: 2;
+            grid-column: 1;
+            flex-direction: column;
+            align-items: flex-start;
         }
 
         .experience-card:hover {
@@ -813,14 +831,14 @@
         .exp-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 8px;
         }
 
         .exp-tag {
             background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(59, 130, 246, 0.1));
-            padding: 8px 16px;
+            padding: 6px 12px;
             border-radius: 50px;
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             color: var(--primary);
             font-weight: 500;
         }
@@ -1405,46 +1423,45 @@
                     <div style="position: absolute; top: -30px; right: -30px; font-size: 100px; opacity: 0.1;">🏍️</div>
                     <div style="font-size: 3rem; margin-bottom: 20px;">🏍️</div>
                     <h3 style="color: #FF6B35; font-size: 1.5rem; margin-bottom: 15px; font-weight: 700;">Adventure Rider</h3>
-                    <p style="color: #9CA3AF; line-height: 1.8; margin-bottom: 20px;">
-                        Nothing beats the thrill of the open road! I'm passionate about long-distance bike rides, exploring scenic routes and chasing sunsets.
+                    <p style="color: #9CA3AF; line-height: 1.8; margin-bottom: 15px;">
+                        Nothing beats the thrill of the open road! Covered <strong style="color: #FF6B35;">5000+ km</strong> on bike adventures. Love riding in <strong style="color: #FF6B35;">monsoons</strong> through rain and mud!
                     </p>
-                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-                        <div style="background: rgba(255, 107, 53, 0.15); padding: 12px 20px; border-radius: 12px; text-align: center;">
-                            <div style="font-size: 1.8rem; font-weight: 800; color: #FF6B35;">500+</div>
-                            <div style="font-size: 0.8rem; color: #9CA3AF;">KM Rides</div>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 15px;">
+                        <div style="background: rgba(255, 107, 53, 0.15); padding: 10px 16px; border-radius: 12px; text-align: center;">
+                            <div style="font-size: 1.5rem; font-weight: 800; color: #FF6B35;">5000+</div>
+                            <div style="font-size: 0.75rem; color: #9CA3AF;">KM Covered</div>
                         </div>
-                        <div style="background: rgba(255, 107, 53, 0.15); padding: 12px 20px; border-radius: 12px; text-align: center;">
-                            <div style="font-size: 1.8rem; font-weight: 800; color: #FF6B35;">🌄</div>
-                            <div style="font-size: 0.8rem; color: #9CA3AF;">Hill Rides</div>
+                        <div style="background: rgba(255, 107, 53, 0.15); padding: 10px 16px; border-radius: 12px; text-align: center;">
+                            <div style="font-size: 1.5rem; font-weight: 800; color: #FF6B35;">🌧️</div>
+                            <div style="font-size: 0.75rem; color: #9CA3AF;">Monsoon Rides</div>
                         </div>
-                        <div style="background: rgba(255, 107, 53, 0.15); padding: 12px 20px; border-radius: 12px; text-align: center;">
-                            <div style="font-size: 1.8rem; font-weight: 800; color: #FF6B35;">🛣️</div>
-                            <div style="font-size: 0.8rem; color: #9CA3AF;">Highways</div>
+                        <div style="background: rgba(255, 107, 53, 0.15); padding: 10px 16px; border-radius: 12px; text-align: center;">
+                            <div style="font-size: 1.5rem; font-weight: 800; color: #FF6B35;">🛣️</div>
+                            <div style="font-size: 0.75rem; color: #9CA3AF;">Hill Roads</div>
                         </div>
+                    </div>
+                    <div style="background: rgba(255, 107, 53, 0.1); padding: 12px 15px; border-radius: 10px; border-left: 3px solid #FF6B35;">
+                        <p style="color: #FF6B35; font-weight: 600; font-size: 0.9rem; margin: 0; font-style: italic;">"Four wheels move the body, two wheels move the soul" 🏍️</p>
                     </div>
                 </div>
 
-                <!-- Travel Card -->
-                <div style="background: linear-gradient(145deg, rgba(59, 130, 246, 0.1), rgba(147, 197, 253, 0.05)); border-radius: 24px; padding: 35px; border: 1px solid rgba(59, 130, 246, 0.2); transition: all 0.4s ease; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-10px) scale(1.02)'; this.style.boxShadow='0 25px 50px rgba(59, 130, 246, 0.2)';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='none';">
-                    <div style="position: absolute; top: -30px; right: -30px; font-size: 100px; opacity: 0.1;">✈️</div>
-                    <div style="font-size: 3rem; margin-bottom: 20px;">✈️</div>
-                    <h3 style="color: #3B82F6; font-size: 1.5rem; margin-bottom: 15px; font-weight: 700;">Travel Enthusiast</h3>
-                    <p style="color: #9CA3AF; line-height: 1.8; margin-bottom: 20px;">
-                        Exploring new places, experiencing different cultures, and creating memories. Every trip is a new adventure waiting to unfold!
+                <!-- Trekking Card -->
+                <div style="background: linear-gradient(145deg, rgba(16, 185, 129, 0.1), rgba(52, 211, 153, 0.05)); border-radius: 24px; padding: 35px; border: 1px solid rgba(16, 185, 129, 0.2); transition: all 0.4s ease; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-10px) scale(1.02)'; this.style.boxShadow='0 25px 50px rgba(16, 185, 129, 0.2)';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='none';">
+                    <div style="position: absolute; top: -30px; right: -30px; font-size: 100px; opacity: 0.1;">🥾</div>
+                    <div style="font-size: 3rem; margin-bottom: 20px;">🥾</div>
+                    <h3 style="color: #10B981; font-size: 1.5rem; margin-bottom: 15px; font-weight: 700;">Monsoon Trekker</h3>
+                    <p style="color: #9CA3AF; line-height: 1.8; margin-bottom: 15px;">
+                        Love trekking in <strong style="color: #10B981;">Western Ghats</strong> during monsoons! There's something magical about hiking through rain, mist, and lush green trails.
                     </p>
-                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-                        <div style="background: rgba(59, 130, 246, 0.15); padding: 12px 20px; border-radius: 12px; text-align: center;">
-                            <div style="font-size: 1.8rem; font-weight: 800; color: #3B82F6;">🗺️</div>
-                            <div style="font-size: 0.8rem; color: #9CA3AF;">Road Trips</div>
-                        </div>
-                        <div style="background: rgba(59, 130, 246, 0.15); padding: 12px 20px; border-radius: 12px; text-align: center;">
-                            <div style="font-size: 1.8rem; font-weight: 800; color: #3B82F6;">🏔️</div>
-                            <div style="font-size: 0.8rem; color: #9CA3AF;">Mountains</div>
-                        </div>
-                        <div style="background: rgba(59, 130, 246, 0.15); padding: 12px 20px; border-radius: 12px; text-align: center;">
-                            <div style="font-size: 1.8rem; font-weight: 800; color: #3B82F6;">🏖️</div>
-                            <div style="font-size: 0.8rem; color: #9CA3AF;">Beaches</div>
-                        </div>
+                    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 15px;">
+                        <span style="background: rgba(16, 185, 129, 0.15); color: #10B981; padding: 6px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600;">Kudremukh</span>
+                        <span style="background: rgba(16, 185, 129, 0.15); color: #10B981; padding: 6px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600;">Kumara Parvatha</span>
+                        <span style="background: rgba(16, 185, 129, 0.15); color: #10B981; padding: 6px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600;">Nethravathi</span>
+                        <span style="background: rgba(16, 185, 129, 0.15); color: #10B981; padding: 6px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600;">Rani Jhari</span>
+                        <span style="background: rgba(16, 185, 129, 0.15); color: #10B981; padding: 6px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600;">Karenjal</span>
+                    </div>
+                    <div style="background: rgba(16, 185, 129, 0.1); padding: 12px 15px; border-radius: 10px; border-left: 3px solid #10B981;">
+                        <p style="color: #10B981; font-weight: 600; font-size: 0.9rem; margin: 0; font-style: italic;">"The mountains are calling and I must go" 🏔️</p>
                     </div>
                 </div>
 
@@ -1471,26 +1488,26 @@
             </div>
 
             <!-- Fun Stats Row -->
-            <div style="display: flex; justify-content: center; gap: 40px; margin-top: 50px; flex-wrap: wrap;">
-                <div style="text-align: center; padding: 25px 40px; background: rgba(124, 58, 237, 0.1); border-radius: 20px; border: 1px solid rgba(124, 58, 237, 0.2);">
-                    <div style="font-size: 2.5rem; margin-bottom: 10px;">🏍️</div>
-                    <div style="font-size: 1.8rem; font-weight: 800; color: #7C3AED;">500+ KM</div>
-                    <div style="color: #9CA3AF; font-size: 0.9rem;">Longest Ride</div>
+            <div style="display: flex; justify-content: center; gap: 30px; margin-top: 50px; flex-wrap: wrap;">
+                <div style="text-align: center; padding: 20px 35px; background: rgba(255, 107, 53, 0.1); border-radius: 20px; border: 1px solid rgba(255, 107, 53, 0.2);">
+                    <div style="font-size: 2.2rem; margin-bottom: 8px;">🏍️</div>
+                    <div style="font-size: 1.6rem; font-weight: 800; color: #FF6B35;">5000+ KM</div>
+                    <div style="color: #9CA3AF; font-size: 0.85rem;">Total Rides</div>
                 </div>
-                <div style="text-align: center; padding: 25px 40px; background: rgba(229, 57, 53, 0.1); border-radius: 20px; border: 1px solid rgba(229, 57, 53, 0.2);">
-                    <div style="font-size: 2.5rem; margin-bottom: 10px;">❤️</div>
-                    <div style="font-size: 1.8rem; font-weight: 800; color: #E53935;">Since 2008</div>
-                    <div style="color: #9CA3AF; font-size: 0.9rem;">RCB Supporter</div>
+                <div style="text-align: center; padding: 20px 35px; background: rgba(16, 185, 129, 0.1); border-radius: 20px; border: 1px solid rgba(16, 185, 129, 0.2);">
+                    <div style="font-size: 2.2rem; margin-bottom: 8px;">🥾</div>
+                    <div style="font-size: 1.6rem; font-weight: 800; color: #10B981;">5+</div>
+                    <div style="color: #9CA3AF; font-size: 0.85rem;">Treks Done</div>
                 </div>
-                <div style="text-align: center; padding: 25px 40px; background: rgba(59, 130, 246, 0.1); border-radius: 20px; border: 1px solid rgba(59, 130, 246, 0.2);">
-                    <div style="font-size: 2.5rem; margin-bottom: 10px;">🗺️</div>
-                    <div style="font-size: 1.8rem; font-weight: 800; color: #3B82F6;">Many</div>
-                    <div style="color: #9CA3AF; font-size: 0.9rem;">Road Trips Done</div>
+                <div style="text-align: center; padding: 20px 35px; background: rgba(229, 57, 53, 0.1); border-radius: 20px; border: 1px solid rgba(229, 57, 53, 0.2);">
+                    <div style="font-size: 2.2rem; margin-bottom: 8px;">❤️</div>
+                    <div style="font-size: 1.6rem; font-weight: 800; color: #E53935;">Since 2008</div>
+                    <div style="color: #9CA3AF; font-size: 0.85rem;">RCB Fan</div>
                 </div>
-                <div style="text-align: center; padding: 25px 40px; background: rgba(16, 185, 129, 0.1); border-radius: 20px; border: 1px solid rgba(16, 185, 129, 0.2);">
-                    <div style="font-size: 2.5rem; margin-bottom: 10px;">⚡</div>
-                    <div style="font-size: 1.8rem; font-weight: 800; color: #10B981;">100%</div>
-                    <div style="color: #9CA3AF; font-size: 0.9rem;">Virat Fan</div>
+                <div style="text-align: center; padding: 20px 35px; background: rgba(124, 58, 237, 0.1); border-radius: 20px; border: 1px solid rgba(124, 58, 237, 0.2);">
+                    <div style="font-size: 2.2rem; margin-bottom: 8px;">👑</div>
+                    <div style="font-size: 1.6rem; font-weight: 800; color: #7C3AED;">100%</div>
+                    <div style="color: #9CA3AF; font-size: 0.85rem;">Virat Fan</div>
                 </div>
             </div>
         </section>
