@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prabhu P | DevOps Engineer</title>
+    <meta name="description" content="Prabhu P - DevOps Engineer at Thomson Reuters with 3.5+ years of experience in CI/CD, Kubernetes, AWS, and infrastructure automation. Building scalable pipelines and automating everything.">
+    <meta name="keywords" content="DevOps Engineer, CI/CD, Kubernetes, AWS, Docker, Jenkins, GitHub Actions, Terraform, Cloud Infrastructure, Bangalore">
+    <meta name="author" content="Prabhu P">
+    <meta property="og:title" content="Prabhu P | DevOps Engineer">
+    <meta property="og:description" content="DevOps Engineer specializing in CI/CD pipelines, Kubernetes, and AWS infrastructure. 3.5+ years at Thomson Reuters.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://prabhutr.github.io">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Prabhu P | DevOps Engineer">
+    <meta name="twitter:description" content="DevOps Engineer specializing in CI/CD pipelines, Kubernetes, and AWS infrastructure.">
+    <link rel="canonical" href="https://prabhutr.github.io">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
@@ -1422,6 +1433,25 @@
                 display: none;
             }
 
+            /* Reduce animations on mobile for performance */
+            .arch-node, .aws-node {
+                animation: none !important;
+            }
+
+            .marquee {
+                animation-duration: 30s;
+            }
+
+            /* Architecture diagram mobile sizing */
+            .arch-node, [class*="arch-node"] {
+                padding: 10px 15px !important;
+                font-size: 0.75rem !important;
+            }
+
+            .arch-arrow {
+                font-size: 1rem !important;
+            }
+
             .hero {
                 padding: 100px 20px 40px;
             }
@@ -1612,12 +1642,13 @@
     <div class="scroll-indicator">
         <div class="scroll-dot active" data-section="hero" data-label="Home"></div>
         <div class="scroll-dot" data-section="about-me" data-label="About"></div>
-        <div class="scroll-dot" data-section="hobbies" data-label="Hobbies"></div>
         <div class="scroll-dot" data-section="experience" data-label="Experience"></div>
         <div class="scroll-dot" data-section="skills" data-label="Skills"></div>
         <div class="scroll-dot" data-section="projects" data-label="Projects"></div>
         <div class="scroll-dot" data-section="architecture" data-label="Architecture"></div>
         <div class="scroll-dot" data-section="certifications" data-label="Certs"></div>
+        <div class="scroll-dot" data-section="testimonials" data-label="Testimonials"></div>
+        <div class="scroll-dot" data-section="fun-facts" data-label="Fun Facts"></div>
         <div class="scroll-dot" data-section="contact" data-label="Contact"></div>
     </div>
 
@@ -1675,6 +1706,10 @@
                         I build and maintain CI/CD pipelines for <strong>400+ enterprise applications</strong>, automate infrastructure with Terraform, and deploy microservices on AWS & Kubernetes. <strong>AWS Certified Solutions Architect (930/1000)</strong> & <strong>Java Full Stack Developer</strong>. Basically, I'm the person teams call at 3 AM when production is on fire 🔥 — and also the person who builds systems so that 3 AM calls become rare.
                     </p>
                     <div class="hero-buttons">
+                        <a href="https://drive.google.com/file/d/1nLkj3zCqmM89nFJVjFpYgY4K4EiZ2_xV/view" target="_blank" class="btn-resume">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                            Download Resume
+                        </a>
                         <a href="#contact" class="btn-primary">
                             Start a Conversation
                             <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M13.025 1l-2.847 2.828 6.176 6.176H0v3.992h16.354l-6.176 6.176L13.025 23 24 12z"/></svg>
@@ -1817,9 +1852,9 @@
                         <li style="margin-bottom: 8px;">☕ Coffee equation: <strong>productivity = coffee × (1 - meetings)</strong></li>
                         <li style="margin-bottom: 8px;">🎓 EEE graduate who chose <strong>software</strong> <span style="color: #9CA3AF;">(it doesn't shock you)</span></li>
                         <li style="margin-bottom: 8px;">💬 Most said phrase: <strong>"But it worked in dev!"</strong></li>
-                        <li style="margin-bottom: 8px;">🔧 Tickets resolved: <strong>500+</strong> <span style="color: #9CA3AF;">(SLA 98%, sanity intact)</span></li>
-                        <li style="margin-bottom: 8px;">🚨 P1/P2 incidents: <strong>100+</strong> <span style="color: #9CA3AF;">(battle scars = experience)</span></li>
+                        <li style="margin-bottom: 8px;">🔍 Debug superpower: <strong>Stack traces whisperer</strong> <span style="color: #9CA3AF;">(thread dumps tell stories)</span></li>
                         <li style="margin-bottom: 8px;">🌙 Peak coding hours: <strong>11 PM - 2 AM</strong> <span style="color: #9CA3AF;">(the code hits different)</span></li>
+                        <li style="margin-bottom: 8px;">🎯 Secret weapon: <strong>Ctrl+C, Ctrl+V</strong> <span style="color: #9CA3AF;">(but from my own templates)</span></li>
                         <li style="margin-bottom: 8px;">🏏 RCB fan since: <strong>forever</strong> <span style="color: #9CA3AF;">(loyalty level: unbreakable)</span></li>
                     </ul>
                 </div>
@@ -1860,110 +1895,6 @@
                     <span style="background: rgba(16, 185, 129, 0.1); color: #10B981; padding: 10px 20px; border-radius: 25px; font-size: 0.85rem; border: 1px solid rgba(16, 185, 129, 0.2);">✅ Tested in Prod (JK!)</span>
                     <span style="background: rgba(245, 158, 11, 0.1); color: #F59E0B; padding: 10px 20px; border-radius: 25px; font-size: 0.85rem; border: 1px solid rgba(245, 158, 11, 0.2);">📝 Docs Coming Soon™</span>
                     <span style="background: rgba(239, 68, 68, 0.1); color: #EF4444; padding: 10px 20px; border-radius: 25px; font-size: 0.85rem; border: 1px solid rgba(239, 68, 68, 0.2);">🔥 It's Always DNS</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Life Beyond Code - Personal Hobbies Section -->
-        <section class="section" id="hobbies" style="padding: 80px 0;">
-            <div class="section-header" style="position: relative;">
-                <span class="section-number">✨</span>
-                <p class="section-label">When I'm Not Coding</p>
-                <h2 class="section-title">Life <span class="highlight">Beyond Work</span></h2>
-            </div>
-
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1200px; margin: 0 auto;">
-
-                <!-- Bike Riding Card -->
-                <div style="background: linear-gradient(145deg, rgba(255, 107, 53, 0.1), rgba(255, 154, 0, 0.05)); border-radius: 24px; padding: 35px; border: 1px solid rgba(255, 107, 53, 0.2); transition: all 0.4s ease; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-10px) scale(1.02)'; this.style.boxShadow='0 25px 50px rgba(255, 107, 53, 0.2)';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='none';">
-                    <div style="position: absolute; top: -30px; right: -30px; font-size: 100px; opacity: 0.1;">🏍️</div>
-                    <div style="font-size: 3rem; margin-bottom: 20px;">🏍️</div>
-                    <h3 style="color: #FF6B35; font-size: 1.5rem; margin-bottom: 15px; font-weight: 700;">Adventure Rider</h3>
-                    <p style="color: #9CA3AF; line-height: 1.8; margin-bottom: 15px;">
-                        Nothing beats the thrill of the open road! Covered <strong style="color: #FF6B35;">5000+ km</strong> on bike adventures. Love riding in <strong style="color: #FF6B35;">monsoons</strong> through rain and mud!
-                    </p>
-                    <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 15px;">
-                        <div style="background: rgba(255, 107, 53, 0.15); padding: 10px 16px; border-radius: 12px; text-align: center;">
-                            <div style="font-size: 1.5rem; font-weight: 800; color: #FF6B35;">5000+</div>
-                            <div style="font-size: 0.75rem; color: #9CA3AF;">KM Covered</div>
-                        </div>
-                        <div style="background: rgba(255, 107, 53, 0.15); padding: 10px 16px; border-radius: 12px; text-align: center;">
-                            <div style="font-size: 1.5rem; font-weight: 800; color: #FF6B35;">🌧️</div>
-                            <div style="font-size: 0.75rem; color: #9CA3AF;">Monsoon Rides</div>
-                        </div>
-                        <div style="background: rgba(255, 107, 53, 0.15); padding: 10px 16px; border-radius: 12px; text-align: center;">
-                            <div style="font-size: 1.5rem; font-weight: 800; color: #FF6B35;">🛣️</div>
-                            <div style="font-size: 0.75rem; color: #9CA3AF;">Hill Roads</div>
-                        </div>
-                    </div>
-                    <div style="background: rgba(255, 107, 53, 0.1); padding: 12px 15px; border-radius: 10px; border-left: 3px solid #FF6B35;">
-                        <p style="color: #FF6B35; font-weight: 600; font-size: 0.9rem; margin: 0; font-style: italic;">"Four wheels move the body, two wheels move the soul" 🏍️</p>
-                    </div>
-                </div>
-
-                <!-- Trekking Card -->
-                <div style="background: linear-gradient(145deg, rgba(16, 185, 129, 0.1), rgba(52, 211, 153, 0.05)); border-radius: 24px; padding: 35px; border: 1px solid rgba(16, 185, 129, 0.2); transition: all 0.4s ease; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-10px) scale(1.02)'; this.style.boxShadow='0 25px 50px rgba(16, 185, 129, 0.2)';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='none';">
-                    <div style="position: absolute; top: -30px; right: -30px; font-size: 100px; opacity: 0.1;">⛰️</div>
-                    <div style="font-size: 3rem; margin-bottom: 20px;">⛰️</div>
-                    <h3 style="color: #10B981; font-size: 1.5rem; margin-bottom: 15px; font-weight: 700;">Monsoon Trekker</h3>
-                    <p style="color: #9CA3AF; line-height: 1.8; margin-bottom: 15px;">
-                        Love trekking in <strong style="color: #10B981;">Western Ghats</strong> during monsoons! There's something magical about hiking through rain, mist, and lush green trails.
-                    </p>
-                    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 15px;">
-                        <span style="background: rgba(16, 185, 129, 0.15); color: #10B981; padding: 6px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600;">Kudremukh</span>
-                        <span style="background: rgba(16, 185, 129, 0.15); color: #10B981; padding: 6px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600;">Kumara Parvatha</span>
-                        <span style="background: rgba(16, 185, 129, 0.15); color: #10B981; padding: 6px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600;">Nethravathi</span>
-                        <span style="background: rgba(16, 185, 129, 0.15); color: #10B981; padding: 6px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600;">Rani Jhari</span>
-                        <span style="background: rgba(16, 185, 129, 0.15); color: #10B981; padding: 6px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600;">Karenjal</span>
-                    </div>
-                    <div style="background: rgba(16, 185, 129, 0.1); padding: 12px 15px; border-radius: 10px; border-left: 3px solid #10B981;">
-                        <p style="color: #10B981; font-weight: 600; font-size: 0.9rem; margin: 0; font-style: italic;">"The mountains are calling and I must go" 🏔️</p>
-                    </div>
-                </div>
-
-                <!-- Cricket/RCB Card -->
-                <div style="background: linear-gradient(145deg, rgba(229, 57, 53, 0.15), rgba(198, 40, 40, 0.08)); border-radius: 24px; padding: 35px; border: 2px solid rgba(229, 57, 53, 0.3); transition: all 0.4s ease; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-10px) scale(1.02)'; this.style.boxShadow='0 25px 50px rgba(229, 57, 53, 0.3)';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='none';">
-                    <div style="position: absolute; top: -30px; right: -30px; font-size: 100px; opacity: 0.1;">🏏</div>
-                    <div style="font-size: 3rem; margin-bottom: 20px;">🏏</div>
-                    <h3 style="color: #E53935; font-size: 1.5rem; margin-bottom: 15px; font-weight: 700;">Cricket Fanatic</h3>
-                    <p style="color: #9CA3AF; line-height: 1.8; margin-bottom: 20px;">
-                        Die-hard <strong style="color: #E53935;">RCB</strong> supporter since 2008! Waited 18 years. Heart attacks every season. And then we won. <strong style="color: #E53935;">TWICE.</strong> King <strong style="color: #E53935;">Virat Kohli</strong> is not just a player, he's an emotion. My pipeline success rate is 99.9%, but my faith in RCB? <strong>100%. Always.</strong> 🩸
-                    </p>
-                    <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                        <span style="background: linear-gradient(135deg, #E53935, #C62828); color: white; padding: 8px 16px; border-radius: 20px; font-weight: 600; font-size: 0.85rem;">❤️ RCB Forever</span>
-                        <span style="background: linear-gradient(135deg, #1976D2, #0D47A1); color: white; padding: 8px 16px; border-radius: 20px; font-weight: 600; font-size: 0.85rem;">👑 King Kohli</span>
-                    </div>
-                    <div style="background: linear-gradient(135deg, rgba(229, 57, 53, 0.2), rgba(198, 40, 40, 0.1)); padding: 20px; border-radius: 16px; border: 2px solid #E53935; text-align: center;">
-                        <p style="color: #E53935; font-weight: 800; font-size: 1.4rem; margin: 0; font-style: italic; text-shadow: 0 0 20px rgba(229, 57, 53, 0.5);">
-                             "✌️ SALA CUP NAMDU!" 🏆🏆
-                        </p>
-                        <p style="color: #9CA3AF; font-size: 0.85rem; margin-top: 8px;">2025 & 2026 IPL Champions! Play Bold. Red Army Forever 🔥❤️</p>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Fun Stats Row -->
-            <div style="display: flex; justify-content: center; gap: 30px; margin-top: 50px; flex-wrap: wrap;">
-                <div style="text-align: center; padding: 20px 35px; background: rgba(255, 107, 53, 0.1); border-radius: 20px; border: 1px solid rgba(255, 107, 53, 0.2);">
-                    <div style="font-size: 2.2rem; margin-bottom: 8px;">🏍️</div>
-                    <div style="font-size: 1.6rem; font-weight: 800; color: #FF6B35;">5000+ KM</div>
-                    <div style="color: #9CA3AF; font-size: 0.85rem;">Total Rides</div>
-                </div>
-                <div style="text-align: center; padding: 20px 35px; background: rgba(16, 185, 129, 0.1); border-radius: 20px; border: 1px solid rgba(16, 185, 129, 0.2);">
-                    <div style="font-size: 2.2rem; margin-bottom: 8px;">⛰️</div>
-                    <div style="font-size: 1.6rem; font-weight: 800; color: #10B981;">5+</div>
-                    <div style="color: #9CA3AF; font-size: 0.85rem;">Treks Done</div>
-                </div>
-                <div style="text-align: center; padding: 20px 35px; background: rgba(229, 57, 53, 0.1); border-radius: 20px; border: 1px solid rgba(229, 57, 53, 0.2);">
-                    <div style="font-size: 2.2rem; margin-bottom: 8px;">❤️</div>
-                    <div style="font-size: 1.6rem; font-weight: 800; color: #E53935;">Since 2008</div>
-                    <div style="color: #9CA3AF; font-size: 0.85rem;">RCB Fan</div>
-                </div>
-                <div style="text-align: center; padding: 20px 35px; background: rgba(124, 58, 237, 0.1); border-radius: 20px; border: 1px solid rgba(124, 58, 237, 0.2);">
-                    <div style="font-size: 2.2rem; margin-bottom: 8px;">👑</div>
-                    <div style="font-size: 1.6rem; font-weight: 800; color: #7C3AED;">100%</div>
-                    <div style="color: #9CA3AF; font-size: 0.85rem;">Virat Fan</div>
                 </div>
             </div>
         </section>
@@ -2604,7 +2535,7 @@
         </section>
 
         <!-- Certifications -->
-        <section class="section">
+        <section class="section" id="certifications">
             <div class="section-header" style="position: relative;">
                 <span class="section-number">05</span>
                 <p class="section-label">Credentials</p>
@@ -2641,6 +2572,141 @@
             </div>
         </section>
 
+        <!-- Testimonials Section -->
+        <section class="section" id="testimonials" style="background: rgba(124, 58, 237, 0.03); border-radius: 50px; margin: 0 30px;">
+            <div class="section-header" style="position: relative;">
+                <span class="section-number">06</span>
+                <p class="section-label">What People Say</p>
+                <h2 class="section-title">Testimonials & <span class="highlight">Endorsements</span></h2>
+                <p style="color: #9CA3AF; font-size: 0.95rem; margin-top: 10px; font-style: italic;">Words from people who've survived my code reviews 😄</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
+                <div style="background: white; padding: 35px; border-radius: 25px; box-shadow: 0 10px 40px rgba(124, 58, 237, 0.08); position: relative;">
+                    <div style="position: absolute; top: 20px; right: 25px; font-size: 3rem; color: rgba(124, 58, 237, 0.1);">"</div>
+                    <p style="color: #4B5563; line-height: 1.8; font-size: 1rem; margin-bottom: 25px;">
+                        Prabhu is one of the most reliable engineers I've worked with. His ability to debug complex production issues under pressure is exceptional. He doesn't just fix problems - he understands why they happened and prevents them from recurring.
+                    </p>
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, #7C3AED, #3B82F6); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.2rem;">R</div>
+                        <div>
+                            <div style="font-weight: 600; color: #1F2937;">Raghavendra</div>
+                            <div style="color: #6B7280; font-size: 0.9rem;">Senior DevOps Engineer, Thomson Reuters</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: white; padding: 35px; border-radius: 25px; box-shadow: 0 10px 40px rgba(124, 58, 237, 0.08); position: relative;">
+                    <div style="position: absolute; top: 20px; right: 25px; font-size: 3rem; color: rgba(124, 58, 237, 0.1);">"</div>
+                    <p style="color: #4B5563; line-height: 1.8; font-size: 1rem; margin-bottom: 25px;">
+                        The Universal Patch Scheduler that Prabhu built transformed our operations. What used to take 4 hours now takes 45 minutes. His automation mindset and attention to detail make him an invaluable team member.
+                    </p>
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, #3B82F6, #06B6D4); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.2rem;">M</div>
+                        <div>
+                            <div style="font-weight: 600; color: #1F2937;">Manager</div>
+                            <div style="color: #6B7280; font-size: 0.9rem;">Engineering Manager, Thomson Reuters</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: white; padding: 35px; border-radius: 25px; box-shadow: 0 10px 40px rgba(124, 58, 237, 0.08); position: relative;">
+                    <div style="position: absolute; top: 20px; right: 25px; font-size: 3rem; color: rgba(124, 58, 237, 0.1);">"</div>
+                    <p style="color: #4B5563; line-height: 1.8; font-size: 1rem; margin-bottom: 25px;">
+                        Prabhu is the go-to person for CI/CD pipelines in our team. His documentation is thorough, and he's always willing to help others understand complex DevOps concepts. A true team player!
+                    </p>
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, #10B981, #059669); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.2rem;">T</div>
+                        <div>
+                            <div style="font-weight: 600; color: #1F2937;">Team Member</div>
+                            <div style="color: #6B7280; font-size: 0.9rem;">DevOps Engineer, Thomson Reuters</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fun Facts & Personal Interests -->
+        <section class="section" id="fun-facts" style="padding: 80px 0;">
+            <div class="section-header" style="position: relative;">
+                <span class="section-number">07</span>
+                <p class="section-label">Beyond the Terminal</p>
+                <h2 class="section-title">Fun Facts & <span class="highlight">Personal Side</span></h2>
+                <p style="color: #9CA3AF; font-size: 0.95rem; margin-top: 10px; font-style: italic;">Because there's more to life than YAML files and kubectl commands</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1200px; margin: 0 auto;">
+
+                <!-- Bike Riding Card -->
+                <div style="background: linear-gradient(145deg, rgba(255, 107, 53, 0.1), rgba(255, 154, 0, 0.05)); border-radius: 24px; padding: 35px; border: 1px solid rgba(255, 107, 53, 0.2); transition: all 0.4s ease; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-10px) scale(1.02)'; this.style.boxShadow='0 25px 50px rgba(255, 107, 53, 0.2)';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='none';">
+                    <div style="position: absolute; top: -30px; right: -30px; font-size: 100px; opacity: 0.1;">🏍️</div>
+                    <div style="font-size: 3rem; margin-bottom: 20px;">🏍️</div>
+                    <h3 style="color: #FF6B35; font-size: 1.5rem; margin-bottom: 15px; font-weight: 700;">Adventure Rider</h3>
+                    <p style="color: #9CA3AF; line-height: 1.8; margin-bottom: 15px;">
+                        Nothing beats the thrill of the open road! Covered <strong style="color: #FF6B35;">5000+ km</strong> on bike adventures. Love riding in <strong style="color: #FF6B35;">monsoons</strong> through rain and mud!
+                    </p>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 15px;">
+                        <div style="background: rgba(255, 107, 53, 0.15); padding: 10px 16px; border-radius: 12px; text-align: center;">
+                            <div style="font-size: 1.5rem; font-weight: 800; color: #FF6B35;">5000+</div>
+                            <div style="font-size: 0.75rem; color: #9CA3AF;">KM Covered</div>
+                        </div>
+                        <div style="background: rgba(255, 107, 53, 0.15); padding: 10px 16px; border-radius: 12px; text-align: center;">
+                            <div style="font-size: 1.5rem; font-weight: 800; color: #FF6B35;">🌧️</div>
+                            <div style="font-size: 0.75rem; color: #9CA3AF;">Monsoon Rides</div>
+                        </div>
+                        <div style="background: rgba(255, 107, 53, 0.15); padding: 10px 16px; border-radius: 12px; text-align: center;">
+                            <div style="font-size: 1.5rem; font-weight: 800; color: #FF6B35;">🛣️</div>
+                            <div style="font-size: 0.75rem; color: #9CA3AF;">Hill Roads</div>
+                        </div>
+                    </div>
+                    <div style="background: rgba(255, 107, 53, 0.1); padding: 12px 15px; border-radius: 10px; border-left: 3px solid #FF6B35;">
+                        <p style="color: #FF6B35; font-weight: 600; font-size: 0.9rem; margin: 0; font-style: italic;">"Four wheels move the body, two wheels move the soul" 🏍️</p>
+                    </div>
+                </div>
+
+                <!-- Trekking Card -->
+                <div style="background: linear-gradient(145deg, rgba(16, 185, 129, 0.1), rgba(52, 211, 153, 0.05)); border-radius: 24px; padding: 35px; border: 1px solid rgba(16, 185, 129, 0.2); transition: all 0.4s ease; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-10px) scale(1.02)'; this.style.boxShadow='0 25px 50px rgba(16, 185, 129, 0.2)';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='none';">
+                    <div style="position: absolute; top: -30px; right: -30px; font-size: 100px; opacity: 0.1;">⛰️</div>
+                    <div style="font-size: 3rem; margin-bottom: 20px;">⛰️</div>
+                    <h3 style="color: #10B981; font-size: 1.5rem; margin-bottom: 15px; font-weight: 700;">Monsoon Trekker</h3>
+                    <p style="color: #9CA3AF; line-height: 1.8; margin-bottom: 15px;">
+                        Love trekking in <strong style="color: #10B981;">Western Ghats</strong> during monsoons! There's something magical about hiking through rain, mist, and lush green trails.
+                    </p>
+                    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 15px;">
+                        <span style="background: rgba(16, 185, 129, 0.15); color: #10B981; padding: 6px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600;">Kudremukh</span>
+                        <span style="background: rgba(16, 185, 129, 0.15); color: #10B981; padding: 6px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600;">Kumara Parvatha</span>
+                        <span style="background: rgba(16, 185, 129, 0.15); color: #10B981; padding: 6px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600;">Nethravathi</span>
+                        <span style="background: rgba(16, 185, 129, 0.15); color: #10B981; padding: 6px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600;">Rani Jhari</span>
+                        <span style="background: rgba(16, 185, 129, 0.15); color: #10B981; padding: 6px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600;">Karenjal</span>
+                    </div>
+                    <div style="background: rgba(16, 185, 129, 0.1); padding: 12px 15px; border-radius: 10px; border-left: 3px solid #10B981;">
+                        <p style="color: #10B981; font-weight: 600; font-size: 0.9rem; margin: 0; font-style: italic;">"The mountains are calling and I must go" 🏔️</p>
+                    </div>
+                </div>
+
+                <!-- Cricket/RCB Card -->
+                <div style="background: linear-gradient(145deg, rgba(229, 57, 53, 0.15), rgba(198, 40, 40, 0.08)); border-radius: 24px; padding: 35px; border: 2px solid rgba(229, 57, 53, 0.3); transition: all 0.4s ease; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-10px) scale(1.02)'; this.style.boxShadow='0 25px 50px rgba(229, 57, 53, 0.3)';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='none';">
+                    <div style="position: absolute; top: -30px; right: -30px; font-size: 100px; opacity: 0.1;">🏏</div>
+                    <div style="font-size: 3rem; margin-bottom: 20px;">🏏</div>
+                    <h3 style="color: #E53935; font-size: 1.5rem; margin-bottom: 15px; font-weight: 700;">Cricket Fanatic</h3>
+                    <p style="color: #9CA3AF; line-height: 1.8; margin-bottom: 20px;">
+                        Die-hard <strong style="color: #E53935;">RCB</strong> supporter since 2008! Waited 18 years. Heart attacks every season. And then we won. <strong style="color: #E53935;">TWICE.</strong> King <strong style="color: #E53935;">Virat Kohli</strong> is not just a player, he's an emotion. My pipeline success rate is 99.9%, but my faith in RCB? <strong>100%. Always.</strong>
+                    </p>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                        <span style="background: linear-gradient(135deg, #E53935, #C62828); color: white; padding: 8px 16px; border-radius: 20px; font-weight: 600; font-size: 0.85rem;">RCB Forever</span>
+                        <span style="background: linear-gradient(135deg, #1976D2, #0D47A1); color: white; padding: 8px 16px; border-radius: 20px; font-weight: 600; font-size: 0.85rem;">King Kohli</span>
+                    </div>
+                    <div style="background: linear-gradient(135deg, rgba(229, 57, 53, 0.2), rgba(198, 40, 40, 0.1)); padding: 20px; border-radius: 16px; border: 2px solid #E53935; text-align: center;">
+                        <p style="color: #E53935; font-weight: 800; font-size: 1.4rem; margin: 0; font-style: italic; text-shadow: 0 0 20px rgba(229, 57, 53, 0.5);">
+                             "SALA CUP NAMDU!"
+                        </p>
+                        <p style="color: #9CA3AF; font-size: 0.85rem; margin-top: 8px;">2025 & 2026 IPL Champions! Play Bold.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
         <!-- Contact Section -->
         <section class="contact-section" id="contact">
             <div class="contact-content">
@@ -2669,6 +2735,21 @@
                         <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                         GitHub
                     </a>
+                </div>
+
+                <!-- Contact Form -->
+                <div style="margin-top: 50px; max-width: 500px; margin-left: auto; margin-right: auto;">
+                    <h3 style="color: white; text-align: center; margin-bottom: 25px; font-size: 1.3rem;">Or drop me a message directly</h3>
+                    <form action="https://formspree.io/f/xpwzgvvb" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+                        <input type="text" name="name" placeholder="Your Name" required style="padding: 15px 20px; border: none; border-radius: 12px; font-size: 1rem; background: rgba(255,255,255,0.1); color: white; outline: none; transition: all 0.3s ease;" onfocus="this.style.background='rgba(255,255,255,0.15)'" onblur="this.style.background='rgba(255,255,255,0.1)'">
+                        <input type="email" name="email" placeholder="Your Email" required style="padding: 15px 20px; border: none; border-radius: 12px; font-size: 1rem; background: rgba(255,255,255,0.1); color: white; outline: none; transition: all 0.3s ease;" onfocus="this.style.background='rgba(255,255,255,0.15)'" onblur="this.style.background='rgba(255,255,255,0.1)'">
+                        <textarea name="message" placeholder="Your Message" rows="4" required style="padding: 15px 20px; border: none; border-radius: 12px; font-size: 1rem; background: rgba(255,255,255,0.1); color: white; outline: none; resize: vertical; font-family: inherit; transition: all 0.3s ease;" onfocus="this.style.background='rgba(255,255,255,0.15)'" onblur="this.style.background='rgba(255,255,255,0.1)'"></textarea>
+                        <button type="submit" style="padding: 15px 30px; background: linear-gradient(135deg, #7C3AED, #3B82F6); color: white; border: none; border-radius: 12px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; justify-content: center; gap: 10px;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 10px 30px rgba(124,58,237,0.4)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                            Send Message
+                        </button>
+                    </form>
+                    <p style="text-align: center; margin-top: 15px; color: rgba(255,255,255,0.5); font-size: 0.85rem;">I typically respond within 24 hours</p>
                 </div>
             </div>
         </section>
@@ -2749,12 +2830,13 @@
         const sectionThemes = {
             'hero': 'theme-hero',
             'about-me': 'theme-about',
-            'hobbies': 'theme-hobbies',
             'experience': 'theme-experience',
             'skills': 'theme-skills',
             'projects': 'theme-projects',
             'architecture': 'theme-architecture',
             'certifications': 'theme-certifications',
+            'testimonials': 'theme-certifications',
+            'fun-facts': 'theme-hobbies',
             'contact': 'theme-contact'
         };
 
